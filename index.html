@@ -50,6 +50,16 @@
   .card .icon { width: 44px; height: 44px; border-radius: 10px; background: #eaf1fd; color: #0b3a8c; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
   .card h3 { font-size: 17px; margin-bottom: 8px; }
   .card p { font-size: 14px; color: #5a6678; }
+
+  /* Products */
+  .prod-card { border: 1px solid #e8ecf1; border-radius: 14px; background: #fff; padding: 26px 26px 22px; display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s; }
+  .prod-card:hover { box-shadow: 0 12px 32px rgba(11,58,140,.12); transform: translateY(-3px); }
+  .prod-model { font-size: 18px; font-weight: 700; color: #0b3a8c; }
+  .prod-tag { display: inline-block; font-size: 12px; color: #1058c9; background: #eaf1fd; border-radius: 999px; padding: 3px 12px; margin: 10px 0 14px; align-self: flex-start; letter-spacing: .5px; }
+  .prod-specs { list-style: none; margin-bottom: 14px; }
+  .prod-specs li { font-size: 13.5px; color: #5a6678; padding: 5px 0 5px 16px; position: relative; }
+  .prod-specs li::before { content: ""; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: #1058c9; }
+  .prod-use { margin-top: auto; font-size: 13px; color: #8a94a6; border-top: 1px solid #eef2f7; padding-top: 12px; }
   .about-flex { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
   .about-flex p { color: #5a6678; margin-bottom: 14px; }
   .about-panel { background: #f4f7fc; border-radius: 14px; padding: 32px; }
@@ -89,6 +99,7 @@
     <nav>
       <a href="#about">关于我们</a>
       <a href="#business">业务范围</a>
+      <a href="#products">核心产品</a>
       <a href="#contact">联系我们</a>
     </nav>
   </div>
@@ -98,7 +109,7 @@
   <div class="container">
     <div class="hero-kicker">ICTESTER ELECTRONIC TECHNOLOGY · ICTESTER.CN</div>
     <h1>专注电子科技<br>做可靠的半导体测试与电子产品伙伴</h1>
-    <p>武汉芯测电子科技有限公司致力于电子科技领域的技术开发与服务，业务覆盖电子产品、仪器仪表、电子元器件与半导体专用设备的研发、制造与销售。</p>
+    <p>武汉芯测电子科技有限公司致力于电子科技领域的技术开发与服务，提供 FPGA 加速卡、工业数据采集卡等产品与解决方案，业务覆盖电子产品、仪器仪表、电子元器件与半导体专用设备的研发、制造与销售。</p>
     <a class="btn btn-primary" href="#contact">联系我们</a>
     <a class="btn btn-ghost" href="#business">了解业务</a>
     <div class="hero-stats">
@@ -161,6 +172,65 @@
   </div>
 </section>
 
+<section id="products">
+  <div class="container">
+    <div class="sec-kicker">CORE PRODUCTS</div>
+    <div class="sec-title">FPGA 加速卡与工业采集方案</div>
+    <div class="sec-desc">基于 AMD/Xilinx 自适应计算平台，面向数据中心加速、边缘 AI 推理、通信协议处理与工业测试测量场景，提供板卡选型、定制开发与批量交付。以下为核心板卡方向，规格可按需定制。</div>
+    <div class="grid">
+
+      <div class="prod-card">
+        <div class="prod-model">ZU19EG 采集 / 加速卡</div>
+        <div class="prod-tag">Zynq UltraScale+ · XCZU19EG</div>
+        <ul class="prod-specs">
+          <li>约 114 万逻辑单元，PS+PL 全可编程架构</li>
+          <li>PCIe Gen3 ×16 主机接口，DDR4 大容量缓存</li>
+          <li>多路 QSFP28 / GT 高速串行接口</li>
+          <li>ARM 处理器硬核，板载系统实时处理</li>
+        </ul>
+        <div class="prod-use">典型应用：高速数据采集、雷达与通信、协议加速</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-model">VU37P 超大规模加速卡</div>
+        <div class="prod-tag">Virtex UltraScale+ · XCVU37P</div>
+        <ul class="prod-specs">
+          <li>约 283 万逻辑单元，8GB HBM2 大带宽内存</li>
+          <li>PCIe ×16 高速主机通道</li>
+          <li>QSFP-DD 网络接口，适配高速数据吞吐</li>
+          <li>支持多卡集群与大规模并行计算</li>
+        </ul>
+        <div class="prod-use">典型应用：数据中心加速、金融低延时、基因计算</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-model">VE3858 边缘 AI 加速卡</div>
+        <div class="prod-tag">Versal AI Edge · XCVE3858</div>
+        <ul class="prod-specs">
+          <li>AI 引擎阵列 + 标量/矢量/自适应硬核</li>
+          <li>低功耗边缘推理与实时信号处理</li>
+          <li>自适应逻辑，支持算法快速迭代</li>
+          <li>工业级温度与可靠性设计可选</li>
+        </ul>
+        <div class="prod-use">典型应用：边缘 AI 推理、机器视觉、实时控制</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-model">工业数据采集卡系列</div>
+        <div class="prod-tag">DAQ · 多通道同步</div>
+        <ul class="prod-specs">
+          <li>多通道同步采样，高精度 ADC 前端</li>
+          <li>PCIe / PXIe / 千兆以太网多种平台</li>
+          <li>宽温设计，适配严苛工业环境</li>
+          <li>配套驱动与上位机软件定制</li>
+        </ul>
+        <div class="prod-use">典型应用：电力监测、轨道交通、产线测试测量</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="container">
     <div class="sec-kicker" style="color:#8fb8ff;">CONTACT</div>
@@ -173,11 +243,11 @@
       </div>
       <div class="contact-item">
         <div class="label">企业邮箱</div>
-        <div class="value"><a href="mailto:xince@ictester.cn">xince@ictester.cn</a></div>
+        <div class="value"><a href="mailto:zhengzhe1@ictester.cn">zhengzhe1@ictester.cn</a></div>
       </div>
       <div class="contact-item">
         <div class="label">公司地址</div>
-        <div class="value">湖北省武汉市</div>
+        <div class="value">湖北省武汉市洪山区八坦路165号803A</div>
       </div>
       <div class="contact-item">
         <div class="label">工作时间</div>
