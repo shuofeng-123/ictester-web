@@ -1,302 +1,198 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="武汉芯测电子科技有限公司 - 专业的集成电路测试与电子测量解决方案提供商">
-    <meta name="keywords" content="芯片测试,集成电路测试,晶圆测试,电子测量,武汉芯测,半导体测试">
-    <title>武汉芯测电子科技有限公司</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>武汉芯测电子科技有限公司 | 芯片测试 · 电子元器件 · 半导体专用设备</title>
+<meta name="description" content="武汉芯测电子科技有限公司成立于2021年，专注电子产品、仪器仪表、电子元器件及半导体专用设备的研发、制造与销售，提供软件开发与电子科技领域技术开发、技术服务。">
+<meta name="keywords" content="武汉芯测,芯测电子,芯片测试,电子元器件,仪器仪表,半导体专用设备,武汉电子科技公司">
+<meta name="author" content="武汉芯测电子科技有限公司">
+<meta property="og:title" content="武汉芯测电子科技有限公司">
+<meta property="og:description" content="专注电子产品、仪器仪表、电子元器件及半导体专用设备的研发、制造与销售。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ictester.cn/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif; color: #1a2332; line-height: 1.7; background: #ffffff; }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e8ecf1; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 34px; height: 34px; border-radius: 8px; background: #0b3a8c; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; letter-spacing: 1px; }
+  .logo-text { font-size: 17px; font-weight: 700; color: #0b3a8c; }
+  .logo-sub { font-size: 11px; color: #8a94a6; display: block; line-height: 1.2; }
+  nav a { margin-left: 28px; text-decoration: none; color: #3c4a5e; font-size: 14.5px; }
+  nav a:hover { color: #0b3a8c; }
+
+  /* Hero */
+  .hero { background: linear-gradient(135deg, #071c42 0%, #0b3a8c 55%, #1058c9 100%); color: #fff; padding: 96px 0 110px; }
+  .hero-kicker { font-size: 13px; letter-spacing: 4px; color: #8fb8ff; margin-bottom: 18px; }
+  .hero h1 { font-size: 42px; font-weight: 700; line-height: 1.25; margin-bottom: 18px; }
+  .hero p { font-size: 17px; color: #c9d8f5; max-width: 640px; margin-bottom: 34px; }
+  .btn { display: inline-block; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-size: 15px; margin-right: 14px; }
+  .btn-primary { background: #ffffff; color: #0b3a8c; font-weight: 600; }
+  .btn-ghost { border: 1px solid rgba(255,255,255,.45); color: #fff; }
+  .hero-stats { display: flex; gap: 48px; margin-top: 60px; flex-wrap: wrap; }
+  .stat b { font-size: 26px; display: block; }
+  .stat span { font-size: 13px; color: #9db9e8; }
+
+  /* Sections */
+  section { padding: 84px 0; }
+  .sec-kicker { font-size: 13px; letter-spacing: 3px; color: #1058c9; font-weight: 600; margin-bottom: 10px; }
+  .sec-title { font-size: 30px; font-weight: 700; margin-bottom: 14px; }
+  .sec-desc { color: #5a6678; max-width: 720px; margin-bottom: 44px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+  .card { border: 1px solid #e8ecf1; border-radius: 12px; padding: 28px; transition: box-shadow .2s; background: #fff; }
+  .card:hover { box-shadow: 0 10px 30px rgba(11,58,140,.10); }
+  .card .icon { width: 44px; height: 44px; border-radius: 10px; background: #eaf1fd; color: #0b3a8c; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+  .card h3 { font-size: 17px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: #5a6678; }
+  .about-flex { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+  .about-flex p { color: #5a6678; margin-bottom: 14px; }
+  .about-panel { background: #f4f7fc; border-radius: 14px; padding: 32px; }
+  .about-panel li { list-style: none; padding: 10px 0; border-bottom: 1px solid #e2e9f5; font-size: 14.5px; color: #3c4a5e; display: flex; justify-content: space-between; }
+  .about-panel li:last-child { border-bottom: none; }
+  .about-panel li b { color: #0b3a8c; font-weight: 600; }
+
+  /* Contact */
+  .contact { background: #071c42; color: #fff; }
+  .contact .sec-title { color: #fff; }
+  .contact .sec-desc { color: #9db9e8; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
+  .contact-item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 26px; }
+  .contact-item .label { font-size: 12.5px; color: #8fb8ff; letter-spacing: 2px; margin-bottom: 8px; }
+  .contact-item .value { font-size: 16.5px; font-weight: 600; }
+  .contact-item .value a { color: #fff; text-decoration: none; }
+  .contact-item .value a:hover { text-decoration: underline; }
+
+  footer { background: #050f26; color: #7688a8; padding: 26px 0; font-size: 13px; }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 800px) {
+    .hero h1 { font-size: 30px; }
+    .about-flex { grid-template-columns: 1fr; }
+    nav a { margin-left: 14px; font-size: 13px; }
+  }
+</style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-icon">芯测</span>
-                <span class="logo-text">武汉芯测电子科技有限公司</span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="菜单">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">首页</a></li>
-                <li><a href="#about" class="nav-link">关于我们</a></li>
-                <li><a href="#services" class="nav-link">业务领域</a></li>
-                <li><a href="#advantages" class="nav-link">核心优势</a></li>
-                <li><a href="#contact" class="nav-link">联系我们</a></li>
-            </ul>
-        </div>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <div class="logo-mark">芯测</div>
+      <div><span class="logo-text">武汉芯测电子科技有限公司</span><span class="logo-sub">Wuhan Xince Electronic Technology Co., Ltd.</span></div>
+    </div>
+    <nav>
+      <a href="#about">关于我们</a>
+      <a href="#business">业务范围</a>
+      <a href="#contact">联系我们</a>
     </nav>
+  </div>
+</header>
 
-    <!-- 首页/Hero -->
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">武汉芯测电子科技</h1>
-            <p class="hero-subtitle">专业的集成电路测试与电子测量解决方案</p>
-            <div class="hero-tags">
-                <span class="tag">芯片测试</span>
-                <span class="tag">晶圆级测试</span>
-                <span class="tag">可靠性验证</span>
-                <span class="tag">测试方案开发</span>
-            </div>
-            <a href="#services" class="btn btn-primary">了解我们的业务</a>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
+<section class="hero">
+  <div class="container">
+    <div class="hero-kicker">XINCE ELECTRONIC TECHNOLOGY · ICTESTER.CN</div>
+    <h1>专注电子科技<br>做可靠的半导体测试与电子产品伙伴</h1>
+    <p>武汉芯测电子科技有限公司致力于电子科技领域的技术开发与服务，业务覆盖电子产品、仪器仪表、电子元器件与半导体专用设备的研发、制造与销售。</p>
+    <a class="btn btn-primary" href="#contact">联系我们</a>
+    <a class="btn btn-ghost" href="#business">了解业务</a>
+    <div class="hero-stats">
+      <div class="stat"><b>2021</b><span>公司成立</span></div>
+      <div class="stat"><b>200万</b><span>注册资本（人民币）</span></div>
+      <div class="stat"><b>4大</b><span>核心业务方向</span></div>
+      <div class="stat"><b>武汉</b><span>公司所在地</span></div>
+    </div>
+  </div>
+</section>
 
-    <!-- 关于我们 -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">ABOUT US</span>
-                <h2 class="section-title">关于我们</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>武汉芯测电子科技有限公司位于武汉东湖新技术开发区——中国光谷核心区域，是一家专注于集成电路测试与电子测量技术的高科技企业。</p>
-                    <p>公司依托光谷地区完善的半导体产业链资源，致力于为芯片设计企业、晶圆代工厂、封装测试厂及终端电子设备厂商提供专业、高效的测试服务与技术解决方案。</p>
-                    <p>我们拥有一支经验丰富的技术团队，配备先进的测试设备，建立了严格的质量管控体系，为客户提供从测试方案设计到量产测试的全流程服务。</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">100<span class="stat-unit">%</span></span>
-                        <span class="stat-label">质量承诺</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">24<span class="stat-unit">H</span></span>
-                        <span class="stat-label">技术响应</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">多<span class="stat-unit">领域</span></span>
-                        <span class="stat-label">测试覆盖</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about">
+  <div class="container">
+    <div class="sec-kicker">ABOUT US</div>
+    <div class="sec-title">关于芯测</div>
+    <div class="about-flex">
+      <div>
+        <p>武汉芯测电子科技有限公司成立于2021年，立足武汉，面向全国，专注软件开发与电子科技领域的技术开发、技术咨询、技术服务与技术转让。</p>
+        <p>公司以"测试"为切入点，围绕电子产品、仪器仪表、电子元器件及半导体器件专用设备，向客户提供从产品选型、方案设计到供应链交付的综合服务，助力电子行业客户降本增效、快速迭代。</p>
+        <p>我们坚持诚信经营、以技术为本，与上下游合作伙伴共建长期稳定的供应与协作关系。</p>
+      </div>
+      <div class="about-panel">
+        <li><span>公司全称</span><b>武汉芯测电子科技有限公司</b></li>
+        <li><span>成立时间</span><b>2021年11月</b></li>
+        <li><span>注册资本</span><b>200万元人民币</b></li>
+        <li><span>公司类型</span><b>有限责任公司</b></li>
+        <li><span>所在地</span><b>湖北 · 武汉</b></li>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 业务领域 -->
-    <section class="section section-alt" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">SERVICES</span>
-                <h2 class="section-title">业务领域</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="4" y="4" width="16" height="16" rx="2"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="12" y1="2" x2="12" y2="6"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="18" x2="8" y2="22"/>
-                            <line x1="12" y1="18" x2="12" y2="22"/>
-                            <line x1="16" y1="18" x2="16" y2="22"/>
-                            <line x1="2" y1="8" x2="6" y2="8"/>
-                            <line x1="2" y1="12" x2="6" y2="12"/>
-                            <line x1="2" y1="16" x2="6" y2="16"/>
-                            <line x1="18" y1="8" x2="22" y2="8"/>
-                            <line x1="18" y1="12" x2="22" y2="12"/>
-                            <line x1="18" y1="16" x2="22" y2="16"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">集成电路测试</h3>
-                    <p class="service-desc">提供数字电路、模拟电路、混合信号电路等各类芯片的功能测试与性能测试服务，覆盖从工程样片到量产的全阶段需求。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="8"/>
-                            <circle cx="12" cy="12" r="3"/>
-                            <line x1="12" y1="2" x2="12" y2="4"/>
-                            <line x1="12" y1="20" x2="12" y2="22"/>
-                            <line x1="2" y1="12" x2="4" y2="12"/>
-                            <line x1="20" y1="12" x2="22" y2="12"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">晶圆级测试</h3>
-                    <p class="service-desc">提供晶圆级CP测试服务，支持多种封装类型与工艺节点，具备高精度探针卡适配能力，满足良率筛查与质量评估需求。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 11l3 3L22 4"/>
-                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">成品测试</h3>
-                    <p class="service-desc">提供封装后成品芯片的FT测试服务，包括功能测试、参数测试、老炼测试等，确保出厂产品质量一致性。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polyline points="16 18 22 12 16 6"/>
-                            <polyline points="8 6 2 12 8 18"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">测试方案开发</h3>
-                    <p class="service-desc">根据客户芯片规格与测试需求，定制开发完整的测试方案，包含测试程序编写、硬件设计、测试流程优化等。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">可靠性验证</h3>
-                    <p class="service-desc">提供HTOL、HTSL、TC、uHAST等可靠性测试服务，依据JEDEC等国际标准，帮助客户评估产品长期可靠性。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
-                            <path d="M6 8h2M6 11h2M10 8h2M10 11h2M14 8h2M14 11h2"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">电子测量仪器</h3>
-                    <p class="service-desc">提供电子测量仪器的销售、租赁及技术支持服务，涵盖示波器、信号源、万用表等各类通用及专用测试仪器。</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="business" style="background:#f4f7fc;">
+  <div class="container">
+    <div class="sec-kicker">OUR BUSINESS</div>
+    <div class="sec-title">业务范围</div>
+    <div class="sec-desc">围绕电子科技产业链，提供技术研发、产品制造与销售服务四位一体的综合能力。</div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">⚙</div>
+        <h3>软件开发与技术服务</h3>
+        <p>软件开发、软件外包服务，以及电子科技领域的技术开发、技术咨询、技术交流与技术推广。</p>
+      </div>
+      <div class="card">
+        <div class="icon">▶</div>
+        <h3>电子产品与元器件</h3>
+        <p>电子产品销售、电子元器件零售与制造，覆盖主流半导体器件与被动元件供应链。</p>
+      </div>
+      <div class="card">
+        <div class="icon">◎</div>
+        <h3>仪器仪表</h3>
+        <p>仪器仪表的销售与制造，为电子测量、测试验证场景提供设备支持与选型建议。</p>
+      </div>
+      <div class="card">
+        <div class="icon">▦</div>
+        <h3>半导体与自动化设备</h3>
+        <p>半导体器件专用设备、工业自动控制系统装置的销售与制造，服务电子制造产线需求。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 核心优势 -->
-    <section class="section" id="advantages">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">ADVANTAGES</span>
-                <h2 class="section-title">核心优势</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="advantages-grid">
-                <div class="advantage-item">
-                    <div class="advantage-number">01</div>
-                    <h3 class="advantage-title">专业技术团队</h3>
-                    <p class="advantage-desc">核心团队成员具有多年半导体测试行业经验，熟悉各类芯片测试流程与标准，能快速响应客户技术需求。</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-number">02</div>
-                    <h3 class="advantage-title">先进测试设备</h3>
-                    <p class="advantage-desc">配备业界主流的自动化测试设备与探针台，支持多种封装类型与工艺节点，保障测试精度与效率。</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-number">03</div>
-                    <h3 class="advantage-title">区位优势</h3>
-                    <p class="advantage-desc">地处武汉光谷核心区域，依托完善的半导体产业链生态，可快速对接上下游资源，缩短交付周期。</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-number">04</div>
-                    <h3 class="advantage-title">质量管控体系</h3>
-                    <p class="advantage-desc">建立完善的质量管控流程，从测试方案审核到报告输出全程可追溯，确保测试数据的准确性与一致性。</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="sec-kicker" style="color:#8fb8ff;">CONTACT</div>
+    <div class="sec-title">联系我们</div>
+    <div class="sec-desc">欢迎来电洽谈业务合作与技术交流。</div>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">联系电话</div>
+        <div class="value">18627805172</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">企业邮箱</div>
+        <div class="value"><a href="mailto:xince@ictester.cn">xince@ictester.cn</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="label">公司地址</div>
+        <div class="value">湖北省武汉市</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">工作时间</div>
+        <div class="value">周一至周五 9:00 - 18:00</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 联系我们 -->
-    <section class="section section-alt" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">CONTACT</span>
-                <h2 class="section-title">联系我们</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon-wrap">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                        </div>
-                        <div class="contact-detail">
-                            <h4>公司地址</h4>
-                            <p>武汉东湖新技术开发区关南科技工业园<br>现代国际设计城三期9幢23层8号、9号</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon-wrap">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                        </div>
-                        <div class="contact-detail">
-                            <h4>企业邮箱</h4>
-                            <p>info@ictester.cn<br><span class="contact-note">（邮箱即将开通）</span></p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon-wrap">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                        </div>
-                        <div class="contact-detail">
-                            <h4>联系电话</h4>
-                            <p>（待补充）<br><span class="contact-note">请通过邮箱联系</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-map">
-                    <div class="map-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        <p>武汉东湖新技术开发区<br>中国光谷</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer>
+  <div class="container">
+    <span>© 2026 武汉芯测电子科技有限公司 Wuhan Xince Electronic Technology Co., Ltd.</span>
+    <span>统一社会信用代码：91420100MA4F44M00H　<span id="icp">鄂ICP备XXXXXXXX号（备案通过后填入）</span></span>
+  </div>
+</footer>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="footer-logo">芯测</span>
-                    <p class="footer-desc">武汉芯测电子科技有限公司<br>专业的集成电路测试与电子测量解决方案提供商</p>
-                </div>
-                <div class="footer-info">
-                    <div class="footer-col">
-                        <h4>快速导航</h4>
-                        <ul>
-                            <li><a href="#home">首页</a></li>
-                            <li><a href="#about">关于我们</a></li>
-                            <li><a href="#services">业务领域</a></li>
-                            <li><a href="#contact">联系我们</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>公司信息</h4>
-                        <ul>
-                            <li>武汉东湖新技术开发区</li>
-                            <li>关南科技工业园</li>
-                            <li>现代国际设计城三期9幢23层</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 武汉芯测电子科技有限公司 版权所有 | 鄂ICP备XXXXXXXX号</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
