@@ -8,8 +8,8 @@
 <meta name="renderer" content="webkit">
 <meta name="x5-page-mode" content="default">
 <title>武汉芯测电子科技有限公司 | FPGA 加速卡 · 工业数据采集方案</title>
-<meta name="description" content="武汉芯测电子科技有限公司专注 FPGA 加速卡与工业数据采集方案，基于 AMD/Xilinx 自适应计算平台，面向数据中心加速、边缘 AI 推理与工业测试测量场景，提供板卡选型、定制开发与批量交付。">
-<meta name="keywords" content="FPGA加速卡,工业数据采集卡,ZU19EG,VU37P,VE3858,VM1802,Versal,武汉板卡定制,Xilinx方案商">
+<meta name="description" content="武汉芯测电子科技有限公司专注 FPGA 加速卡与工业数据采集方案，基于 AMD/Xilinx 自适应计算平台，提供高速 ADC 采集卡（1.25GSPS 双通道 / 250MSPS 四通道）、FMC 采集子卡与加速卡方案，面向数据中心加速、边缘 AI 推理与工业测试测量场景，支持板卡选型、定制开发与批量交付。">
+<meta name="keywords" content="FPGA加速卡,高速数据采集卡,高速ADC采集卡,1.25GSPS采集卡,250MSPS四通道采集卡,FMC子卡,工业数据采集卡,ZU19EG,VU37P,VE3858,VM1802,Versal,武汉板卡定制,Xilinx方案商">
 <meta name="author" content="武汉芯测电子科技有限公司">
 <meta property="og:title" content="武汉芯测电子科技有限公司 | FPGA 加速卡 · 工业数据采集方案">
 <meta property="og:description" content="专注 FPGA 加速卡与工业数据采集方案，基于 AMD/Xilinx 自适应计算平台，提供板卡选型、定制开发与批量交付。">
@@ -63,6 +63,12 @@
   .prod-specs li { font-size: 13.5px; color: #5a6678; padding: 5px 0 5px 16px; position: relative; }
   .prod-specs li::before { content: ""; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: #1058c9; }
   .prod-use { margin-top: auto; font-size: 13px; color: #8a94a6; border-top: 1px solid #eef2f7; padding-top: 12px; }
+
+  /* Products sub-sections */
+  .subsec-title { display: flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 700; color: #0b3a8c; margin: 46px 0 18px; }
+  .subsec-title::before { content: ""; flex: 0 0 auto; width: 4px; height: 18px; border-radius: 2px; background: #1058c9; }
+  .subsec-note { font-size: 13.5px; color: #5a6678; background: #fff; border: 1px solid #e8ecf1; border-radius: 12px; padding: 16px 20px; margin-top: 20px; line-height: 1.8; }
+  .subsec-note b { color: #0b3a8c; }
   .about-flex { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
   .about-flex p { color: #5a6678; margin-bottom: 14px; }
   .about-panel { background: #f4f7fc; border-radius: 14px; padding: 32px; }
@@ -134,6 +140,9 @@
     .prod-tag { font-size: 11.5px; margin: 9px 0 12px; }
     .prod-specs li { font-size: 14px; padding: 5px 0 5px 15px; }
     .prod-use { font-size: 12.5px; }
+    .subsec-title { font-size: 16.5px; margin: 34px 0 14px; gap: 8px; }
+    .subsec-title::before { width: 3px; height: 16px; }
+    .subsec-note { font-size: 13px; padding: 14px 16px; line-height: 1.75; }
 
     .contact-grid { grid-template-columns: 1fr; gap: 14px; }
     .contact-item { padding: 20px 18px; border-radius: 12px; }
@@ -190,7 +199,7 @@
     </div>
     <div class="hero-stats">
       <div class="stat"><b>2021</b><span>公司成立</span></div>
-      <div class="stat"><b>5大</b><span>核心板卡方案</span></div>
+      <div class="stat"><b>8大</b><span>核心板卡方案</span></div>
       <div class="stat"><b>武汉</b><span>公司所在地</span></div>
     </div>
   </div>
@@ -221,6 +230,8 @@
     <div class="sec-kicker">CORE PRODUCTS</div>
     <div class="sec-title">FPGA 加速卡与工业采集方案</div>
     <div class="sec-desc">基于 AMD/Xilinx 自适应计算平台，面向数据中心加速、边缘 AI 推理、通信协议处理与工业测试测量场景，提供板卡选型、定制开发与批量交付。以下为核心板卡方向，规格可按需定制。</div>
+
+    <div class="subsec-title" style="margin-top:0;">FPGA 加速卡方案</div>
     <div class="grid">
 
       <div class="prod-card">
@@ -272,19 +283,65 @@
         <div class="prod-use">典型应用：5G 通信基带、网络协议加速、软件无线电</div>
       </div>
 
+    </div>
+
+    <div class="subsec-title">高速数据采集卡方案</div>
+    <div class="grid">
+
       <div class="prod-card">
-        <div class="prod-model">工业数据采集卡系列</div>
-        <div class="prod-tag">DAQ · 多通道同步</div>
+        <div class="prod-model">高速 ADC 采集卡 · 1.25GSPS 双通道</div>
+        <div class="prod-tag">PCIe Gen3 ×8 · 14bit / 1.25GSPS</div>
         <ul class="prod-specs">
-          <li>多通道同步采样，高精度 ADC 前端</li>
-          <li>PCIe / PXIe / 千兆以太网多种平台</li>
-          <li>宽温设计，适配严苛工业环境</li>
-          <li>配套驱动与上位机软件定制</li>
+          <li>2 通道同步采样，14bit @ 1.25GSPS</li>
+          <li>模拟输入带宽 DC~1GHz，AC / DC 耦合可选</li>
+          <li>PCIe Gen3 ×8 主机接口，板载 DDR4 FIFO 大容量缓存</li>
+          <li>外部触发 / 外参考时钟输入，支持多卡级联同步</li>
         </ul>
-        <div class="prod-use">典型应用：电力监测、轨道交通、产线测试测量</div>
+        <div class="prod-use">典型应用：雷达与电子对抗、超宽带信号侦测、瞬态波形捕捉</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-model">高速 ADC 采集卡 · 250MSPS 四通道</div>
+        <div class="prod-tag">PCIe / 千兆网 · 14bit / 250MSPS</div>
+        <ul class="prod-specs">
+          <li>4 通道全同步采样，14bit @ 250MSPS</li>
+          <li>输入量程 ±1V / ±5V 可选，DC / AC 耦合</li>
+          <li>连续采样 / 有限点 / 预触发 · 后触发 · 延时触发</li>
+          <li>板载缓存 + 长时连续采集可流盘至 SSD 阵列</li>
+        </ul>
+        <div class="prod-use">典型应用：超声与无损检测、多工位并行测试、局部放电监测</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-model">高精度同步采集卡 · 125MSPS 双通道</div>
+        <div class="prod-tag">14 / 16bit · 低噪声前端</div>
+        <ul class="prod-specs">
+          <li>14bit / 16bit 分辨率可选，1 / 2 / 4 通道同步</li>
+          <li>低噪声模拟前端，高 SNR 与 SFDR</li>
+          <li>板载时钟管理，通道间 ps 级同步</li>
+          <li>内 / 外时钟与内 / 外触发灵活切换</li>
+        </ul>
+        <div class="prod-use">典型应用：激光雷达、光电探测、精密测量与科学实验</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-model">FMC 采集子卡与定制模块</div>
+        <div class="prod-tag">FMC-LPC / HPC · 可插载卡</div>
+        <ul class="prod-specs">
+          <li>标准 FMC 接口，直插 ZU19EG / VM1802 等载卡</li>
+          <li>ADC + DAC 组合可选，收发一体设计</li>
+          <li>外部触发与时钟同步，支持多子卡并行</li>
+          <li>工业级温度等级（-40℃ ~ +85℃）可选</li>
+        </ul>
+        <div class="prod-use">典型应用：科研原型验证、通信与雷达收发、算法验证平台</div>
       </div>
 
     </div>
+
+    <div class="subsec-note">
+      <b>软件与开发支持：</b>全系列采集卡提供上位机软件与 SDK，支持 Windows / Linux 及国产操作系统，提供 C/C++、Python、LabVIEW、MATLAB 接口与 DEMO 例程；支持基于 AMD/Xilinx 平台的 FPGA 固件二次开发，可按需集成抽取滤波、数字下变频（DDC）、峰值检测、累加平均等板载算法，实现采集、处理、传输一体化。
+    </div>
+
   </div>
 </section>
 
